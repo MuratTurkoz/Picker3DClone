@@ -11,7 +11,7 @@ namespace Commands.Level
         }
         public void Execute(byte _levelIndex)
         {
-            Object.Instantiate(Resources.Load<GameObject>())
+            Object.Instantiate(Resources.Load<GameObject>($"Prefabs/LevelPrefabs/level { _levelIndex}"));
             
         }
     }

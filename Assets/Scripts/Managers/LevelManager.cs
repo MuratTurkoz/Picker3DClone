@@ -1,5 +1,6 @@
 ﻿using System;
 using Commands.Level;
+using Data.UnityObjects;
 using Data.ValueObjects;
 using UnityEngine;
 
@@ -39,10 +40,12 @@ namespace Managers
 
         private LevelData GetLevelData()
         {
+            return Resources.Load<CD_Level>("Data/CD_Level").Levels[_currentLevel];
         }
-
+        
         private byte GetActiveLevel()
         {
+            return new byte();
         }
     }
 }
